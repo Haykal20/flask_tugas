@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Dynamic Greeting{% endblock %}
+{% block content %}
+<div class="w-full max-w-2xl bg-white rounded-2xl border border-slate-100 p-8 md:p-12 shadow-xl shadow-slate-200/50 text-center transform transition-all duration-300 hover:shadow-2xl">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 mb-6 shadow-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </div>
+    
+    <h1 class="text-2xl font-bold text-slate-900 tracking-tight mb-4">Dynamic Route Result</h1>
+    
+    <div class="p-6 bg-emerald-50/60 border border-emerald-100 rounded-2xl inline-block text-xl font-bold text-emerald-700 shadow-sm tracking-wide">
+        Hello, {{ name }}! Welcome to my Flask app.
+    </div>
+
+    <p class="mt-6 text-[11px] text-slate-400">
+        Parameter URL ditangkap secara dinamis menggunakan aturan routing variabel Flask: <code class="px-1.5 py-0.5 bg-slate-100 rounded text-rose-500 font-mono">/greet/&lt;name&gt;</code>
+    </p>
+</div>
+{% endblock %}

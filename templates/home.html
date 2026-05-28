@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Home - Welcome Page{% endblock %}
+{% block content %}
+<div class="w-full max-w-2xl bg-white rounded-2xl border border-slate-100 p-8 md:p-12 shadow-xl shadow-slate-200/50 text-center transform transition-all duration-300 hover:shadow-2xl">
+    <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 mb-6 shadow-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+    </div>
+    <h1 class="text-3xl font-bold text-slate-900 tracking-tight mb-4">Selamat Datang!</h1>
+    
+    <div class="p-6 bg-slate-50 border border-slate-200/60 rounded-xl inline-block text-lg font-semibold text-indigo-600 shadow-inner tracking-wide">
+        Welcome! I am <span class="text-slate-900 font-bold">{{ nama }}</span>, NIM: <span class="text-slate-900 font-bold">{{ nim }}</span>
+    </div>
+    
+    <p class="mt-6 text-slate-400 leading-relaxed text-xs">
+        Rute ini memproses metode <code class="px-1 py-0.5 bg-slate-100 rounded text-rose-500 font-mono">GET</code> dan merender data identitas mahasiswa secara aman menggunakan Jinja2 Template Engine.
+    </p>
+</div>
+{% endblock %}
